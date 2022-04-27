@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   home-manager = builtins.fetchGit {
-    url = "https://github.com/rycee/home-manager.git";
+    url = "https://github.com/nix-community/home-manager.git";
   };
 in {
   imports = [
