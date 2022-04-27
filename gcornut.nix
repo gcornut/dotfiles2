@@ -51,7 +51,7 @@
       #rustup # rust
       #deno # node runtime
 
-      #starship # terminal prompt
+      starship # terminal prompt
       #slides # terminal presentation tool
 
       #mongodb-tools

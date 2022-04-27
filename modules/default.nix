@@ -6,14 +6,14 @@
   #};
 
   nixpkgs.overlays = [
-    (import ./forgit.nix)
+    #(import ./forgit.nix)
     # TODO remove after alacritty fix
-    (self: super: {
-      alacritty = super.alacritty.overrideAttrs (
-        o: rec {
-          doCheck = false;
-        }
-      );
-    })
+    #(self: super: {
+    #  alacritty = super.alacritty.overrideAttrs (
+    #    o: rec {
+    #      doCheck = false;
+    #    }
+    #  );
+    #})
   ];
 }

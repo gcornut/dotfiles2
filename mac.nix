@@ -3,7 +3,7 @@
     #./karabiner.nix
     #./yabai.nix
     #./spacebar.nix
-    ./alacritty.nix
+    #./alacritty.nix
     ./gcornut.nix
   ];
 
