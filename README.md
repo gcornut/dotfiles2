@@ -15,7 +15,7 @@ nix-shell '<darwin>' -A installer
 darwin-rebuild switch
 
 # install these dotfiles
-git clone https://github.com/breuerfelix/dotfiles.git ~/.nixpkgs
+git clone https://github.com/breuergcornut/dotfiles.git ~/.nixpkgs
 darwin-rebuild switch
 ```
 
@@ -34,7 +34,7 @@ home-manager switch
 
 # install these dotfiles
 rm -rf ~/.config/nixpkgs
-git clone https://github.com/breuerfelix/dotfiles.git ~/.config/nixpkgs
+git clone https://github.com/breuergcornut/dotfiles.git ~/.config/nixpkgs
 home-manager switch
 
 # change default shell to zsh
@@ -46,7 +46,7 @@ sudo chsh -s $(which zsh) $USER
 
 * `home.nix` is the home-manager entrypoint for ssh servers 
 * `mac.nix` is the home-manager entrypoint for macos
-* `felix.nix` is the common entrypoint config for remote and macos version
+* `gcornut.nix` is the common entrypoint config for remote and macos version
 * `darwin-configuration.nix` is the entrypoint for macos system
 
 ## content

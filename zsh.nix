@@ -10,14 +10,6 @@
     '';
   };
 
-  home.file.kubie = {
-    target = ".kube/kubie.yaml";
-    text = ''
-      prompt:
-        zsh_use_rps1: true
-    '';
-  };
-
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -77,7 +69,7 @@
 
       function gclone() { clone github.com:$1 }
 
-      function bclone() { gclone breuerfelix/$1 }
+      function bclone() { gclone breuergcornut/$1 }
 
       function gsm() { git submodule foreach "$* || :" }
 
@@ -123,9 +115,6 @@
       # overrides
       cat = "bat";
       ssh = "TERM=screen ssh";
-      python = "python3";
-      pip = "python3 -m pip";
-      venv = "python3 -m venv";
       j = "z";
 
       # programs

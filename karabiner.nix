@@ -11,7 +11,7 @@ let
       type = "frontmost_application_if";
       # swaps only when in terminal
       bundle_identifiers = [ "^com\\.apple\\.Terminal$" ];
-      file_paths = [ "/etc/profiles/per-user/felix/bin/alacritty" ];
+      file_paths = [ "/etc/profiles/per-user/gcornut/bin/alacritty" ];
     }];
   };
 in {

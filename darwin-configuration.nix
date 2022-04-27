@@ -23,19 +23,19 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   nix = {
-    allowedUsers = [ "felix" ];
+    allowedUsers = [ "gcornut" ];
     package = pkgs.nix;
     #autoOptimiseStore = true; # TODO doesnt work on mac
 
     #gc = {
       #automatic = true;
-      #user = "felix";
+      #user = "gcornut";
       #options = "--delete-older-than 7d";
     #};
   };
 
-  users.users.felix = {
-    home = "/Users/felix";
+  users.users.gcornut = {
+    home = "/Users/gcornut";
     shell = pkgs.zsh;
   };
 
@@ -46,14 +46,14 @@ in {
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    users.felix = import ./mac.nix;
+    users.gcornut = import ./mac.nix;
   };
 
-  networking = {
-    hostName = "alucard";
-    knownNetworkServices = [ "Wi-Fi" ];
+  #networking = {
+    #hostName = "alucard";
+    #knownNetworkServices = [ "Wi-Fi" ];
     #dns = [ "1.1.1.1" "8.8.8.8" ];
-  };
+  #};
 
   fonts = {
     enableFontDir = true;

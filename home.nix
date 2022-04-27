@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     ./modules
-    ./felix.nix
+    ./gcornut.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

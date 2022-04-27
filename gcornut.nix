@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }: {
   imports = [
     ./zsh.nix
-    ./adblock.nix
+    #./adblock.nix
     ./tmux.nix
     ./git.nix
-    ./vim
+    #./vim
   ];
 
   home = {
@@ -12,24 +12,27 @@
 
     packages = with pkgs; [
       # terminal
-      bottom # htop alternatives
+      htop
+      #bottom # htop alternatives
       #btop 
       fd ripgrep # fast search
       gitAndTools.delta # pretty diff tool
       wget curl
-      thefuck # auto correct commands
-      sshfs # mount folders via ssh
+      jq
+      neovim
+      #thefuck # auto correct commands
+      #sshfs # mount folders via ssh
       gh # github cli tool
       # TODO m1 mac ttyd # terminal share via web
-      graph-easy # draw graphs in the terminal
+      #graph-easy # draw graphs in the terminal
       unixtools.watch # watches commands
-      cht-sh # cheat sheet -> cht python read file
+      #cht-sh # cheat sheet -> cht python read file
       tealdeer # community driven man pages
-      dive # analyse docker images
-      hyperfine # benchmark tool
-      sipcalc # ip subnet calculator
-      youtube-dl # download youtube videos
-      ffmpeg # video editing and cutting
+      #dive # analyse docker images
+      #hyperfine # benchmark tool
+      #sipcalc # ip subnet calculator
+      #youtube-dl # download youtube videos
+      #ffmpeg # video editing and cutting
       rclone # sync files
       duf # disk usage
 
@@ -38,20 +41,20 @@
       gnutar # linux implementation of tar
 
       # k8s stuff
-      kubectl krew k9s kubie kind
-      kubelogin-oidc
-      velero # k8s backup tool
+      #kubectl krew k9s kubie kind
+      #kubelogin-oidc
+      #velero # k8s backup tool
 
       #podman # TODO installed via brew - cannot be installed via nix right now
 
-      python3 poetry # python tools
-      rustup # rust
-      deno # node runtime
+      #python3 poetry # python tools
+      #rustup # rust
+      #deno # node runtime
 
       #starship # terminal prompt
-      slides # terminal presentation tool
+      #slides # terminal presentation tool
 
-      mongodb-tools
+      #mongodb-tools
 
       (pkgs.writeShellScriptBin "nixFlakes" ''
         exec ${pkgs.nixFlakes}/bin/nix --experimental-features "nix-command flakes" "$@"

@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }: {
   imports = [
-    ./karabiner.nix
-    ./yabai.nix
-    ./spacebar.nix
+    #./karabiner.nix
+    #./yabai.nix
+    #./spacebar.nix
     ./alacritty.nix
-    ./felix.nix
+    ./gcornut.nix
   ];
 
   programs = {
@@ -12,7 +12,6 @@
       initExtraBeforeCompInit = ''
         eval "$(/opt/homebrew/bin/brew shellenv)"
         eval "$(starship init zsh)"
-        eval "$(thefuck --alias)"
       '';
     };
   };
